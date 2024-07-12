@@ -1,0 +1,35 @@
+@font-face {
+    font-family: regular;
+    src: url(./fonts/fa-regular-400.ttf);
+}
+
+@font-face {
+    font-family: extrabold;
+    src: url(./fonts/CentraNo1-Extrabold.ttf);
+}
+
+@font-face {
+    font-family: medium;
+    src: url(./fonts/CentraNo1-Medium.ttf);
+}
+
+@font-face {
+    font-family: a1;
+    src: url(./fonts/fa-brands-400.ttf);
+}
+
+@font-face {
+    font-family: a2;
+    src: url(./fonts/fa-light-300.ttf);
+}
+
+@font-face {
+    font-family: universal;
+    src: url(./fonts/UniversalSans-v1-2-0-100-0-211111212111-11-550.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
