@@ -4,38 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>coffeandTV</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet" />
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <main class="h-screen w-full bg-[#FF5C00]">
-      <nav class="flex items-center justify-between p-5">
+  <body class="bg-[#FF5C00]">
+    <nav class="fixed w-full p-4 sm:p-6 z-99">
+      <div class="flex justify-between">
         <div class="logo">
-          <img class="sm:w-[13.5vw] w-[43vw]"
+          <img
+            class="sm:w-[13.5vw] w-[43vw]"
             src="https://coffeeand.tv/wp-content/themes/coffee-and-tv/img/framework/logo-pos.svg"
             alt="logo"
           />
         </div>
-        <div class="mid hidden sm:flex items-center gap-6 text-[.99vw] font-['universal'] uppercase">
+        <div
+          class="mid hidden sm:flex items-center gap-6 text-[.99vw] font-['universal'] uppercase"
+        >
           <a href="#">Work</a>
           <a href="#">News</a>
           <a href="#">join Us</a>
           <a href="#">Contact</a>
         </div>
-        <div class="right flex gap-6 sm:gap-5 text-[.99vw] font-['universal'] uppercase">
-            <p class="sm:inline-block hidden">Residence Pictures</p>
-            <i class="text-[5vw] sm:text-[1vw] ri-search-2-line"></i>
-            <i class="text-[5vw] sm:text-[1vw] ri-menu-line"></i>
+        <div
+          class="right flex gap-6 sm:gap-5 text-[.99vw] font-['universal'] uppercase"
+        >
+          <p class="sm:inline-block hidden">Residence Pictures</p>
+          <i class="text-[5vw] sm:text-[1vw] ri-search-2-line"></i>
+          <i id="menu-btn" class="text-[5vw] sm:text-[1vw] ri-menu-line cursor-pointer"></i>
         </div>
-      </nav>
-      <div class="center-text flex items-start sm:items-center h-fit mt-[15vw] sm:mt-0 justify-center w-full sm:h-[90vh]">
-       <img class="h-[43vw] sm:h-[70vh] object-cover" src="https://coffeeand.tv/wp-content/uploads/2022/07/Welcome_v003.png" alt="">
+      </div>
+    </nav>
+
+    <main class="">
+      <div id="menu" class="menu absolute h-0 w-full bg-[#305F59] top-0 left-0 overflow-hidden">
+        <div
+          class="nav-menu w-full flex items-center bg-[#305F59] justify-between p-6 "
+        >
+          <div class="logo-menu">
+            <img
+              class="sm:w-[13.5vw] w-[43vw]"
+              src="https://coffeeand.tv/wp-content/themes/coffee-and-tv/img/framework/logo-neg.svg"
+              alt="logo"
+            />
+          </div>
+          <div class="close-icon ">
+            <span class="flex items-center justify-center gap-5 text-white font-base uppercase text-lg md:text-xl hover:font-bold cursor-pointer md:w-[6vw]">
+              <i class="ri-close-line"></i>
+              <p class="">close</p>
+            </span>
+          </div>
+        </div>
+        <div class="menu-nav-content flex h-fit w-full md:mt-[18vh] px-6">
+          <div
+            class="left h-auto py-[5vh] flex flex-col gap-6 md:gap-8 w-full md:w-1/2 text-white uppercase"
+          >
+            <div class="sub-text work">
+              <h1 class="font-[extrabold] text-[8vw] md:text-[3vw]">Work</h1>
+              <div class="sub-work flex flex-wrap gap-0 md:gap-6 text-md md:text-2xl font-base">
+                <h5 class="mr-3 md:mr-0">VFX</h5>
+                <h5 class="mr-3 md:mr-0">COLOR</h5>
+                <h5 class="mr-3 md:mr-0">MOTION DESIGN</h5>
+                <h5 class="mr-3 md:mr-0">ANIMATION DIRECTION</h5>
+                <h5 class="mr-3 md:mr-0">FILM & TV</h5>
+              </div>
+            </div>
+            <h1 class="sub-text font-[extrabold] text-[8vw] md:text-[3vw]">NEWS</h1>
+            <h1 class="sub-text font-[extrabold] text-[8vw] md:text-[3vw]">JOIN US</h1>
+            <h1 class="sub-text font-[extrabold] text-[8vw] md:text-[3vw]">PLAY</h1>
+            <h1 class="sub-text font-[extrabold] text-[8vw] md:text-[3vw]">BEHIND THE SCREENS</h1>
+            <div class="sub-text about">
+              <h1 class="font-[extrabold] text-[8vw] md:text-[3vw]">ABOUT</h1>
+              <p class="text-md md:text-2xl font-base">B CORP</p>
+            </div>
+            <h1 class="sub-text font-[extrabold] text-[8vw] md:text-[3vw]">CONTACT</h1>
+          </div>
+          <div class="right hidden sm:block h-screen overflow-hidden w-1/2">
+            <div class="right-img flex w-full justify-end">
+              <img
+                class="h-[65vw] object-cover mr-[-5vw]"
+                src="https://coffeeand.tv/wp-content/themes/coffee-and-tv/img/squiggle-2.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-sec h-[46vh] sm:h-screen w-full flex items-center justify-center">
+        <div class="img-cont sm:h-[65vh] w-[90vw] sm:w-[70vw] sm:mt-20">
+          <img class="h-full w-full object-cover" src="https://coffeeand.tv/wp-content/uploads/2022/07/Welcome_v003.png" alt="">
+        </div>
       </div>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
   </body>
 </html>
