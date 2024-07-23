@@ -1,7 +1,13 @@
+(function () {
+    const locomotiveScroll = new LocomotiveScroll();
+})();
+
+
 let menubtn = document.getElementById('menu-btn');
 let close = document.querySelector('.close-icon');
 let menu = document.getElementById('menu');
 let subtext = document.querySelectorAll('.sub-text');
+let mainContent = document.getElementById('main');
 
 function runmenu() {
     gsap.set(subtext, { y: 100, opacity: 0 });
@@ -18,6 +24,7 @@ function runmenu() {
         ease: "power4.inOut",
         opacity: 1,
     });
+    mainContent.style.height = '145vh';
 }
 
 function closebtn() {
@@ -33,6 +40,7 @@ function closebtn() {
         ease: "power4.inOut",
         opacity: 0,
     });
+    mainContent.style.height = 'auto';
 }
 
 menubtn.addEventListener('click', runmenu);
@@ -44,10 +52,10 @@ const floatingImages = () =>{
     section.addEventListener("mousemove", function(details){
         document.querySelectorAll(".image").forEach((elem)=>{
             const position = elem.getAttribute("value")
-    
-            var x = (window.innerWidth + details.clientX * position)/150
-            var y = (window.innerHeight + details.clientY * position)/150
-    
+
+            var x = (window.innerWidth + details.clientX * position)/-190
+            var y = (window.innerHeight + details.clientY * position)/-150
+
             // elem.style.transform = `translateX(${x}px) translateY(${y}px)`
             gsap.to(elem, {
                 x: x,
@@ -59,3 +67,31 @@ const floatingImages = () =>{
     })
 }
 floatingImages()
+
+gsap.to(".max-images .img1", {
+    scale: 0.9,
+    y: -80,
+    duration: 1.4,
+    stagger: 1,
+    scrollTrigger: {
+        trigger: ".max-images",
+        start: "top 90%",
+        end: "top 80%",
+        markers: true,
+        scrub: 3,
+    },
+});
+
+gsap.from(".max-images .img2, .img3", {
+    y: 100,
+    duration: 0.8,
+    opacity: 0,
+    stagger: 1,
+    scrollTrigger: {
+        trigger: ".max-images",
+        start: "top 80%",
+        end: "top 70%",
+        markers: true,
+        scrub: 3,
+    },
+});
